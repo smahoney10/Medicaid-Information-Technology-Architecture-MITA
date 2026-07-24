@@ -81,7 +81,7 @@
 <li class="ds-c-vertical-nav__item ds-c-vertical-nav " style="padding-left: 20px;">
     MITA 4.0 Initiative
   
-  <ul class="ds-c-vertical-nav__subnav" id="collapsible_for_5;">
+  <ul class="ds-c-vertical-nav__subnav" id="collapsible_for_5">
   
   <li class="ds-c-vertical-nav__item">
       <a class="ds-c-vertical-nav__label " 
@@ -309,13 +309,6 @@
 
       gtag('config', 'G-PKN55Q7KS5');
     </script>
-	<script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-PKN55Q7KS5');
-    </script>
 	<script  type="text/javascript">
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -328,8 +321,12 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = null;
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
-    } 
+    }
   });
+
+  // Expand by default so the member list is visible on load
+  coll[i].classList.add("active");
+  coll[i].nextElementSibling.style.maxHeight = coll[i].nextElementSibling.scrollHeight + "px";
 }
 </script>
   </body>
